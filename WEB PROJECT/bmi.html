@@ -1,0 +1,148 @@
+<!DOCTYPE html>
+<html lang="en">
+
+<head>
+  <!-- Document metadata -->
+  <meta charset="UTF-8" />
+  <meta name="viewport" content="width=device-width, initial-scale=1.0" />
+
+  <!-- External resources -->
+  <link href="https://cdn.jsdelivr.net/npm/remixicon@3.4.0/fonts/remixicon.css" rel="stylesheet" />
+  <link rel="stylesheet" href="styles.css" />
+
+  <link rel="stylesheet" href="https://cdnjs.cloudflare.com/ajax/libs/font-awesome/6.4.2/css/all.min.css"
+    integrity="sha512-z3gLpd7yknf1YoNbCzqRKc4qyor8gaKU1qmn+CShxbuBusANI9QpRohGBreCFkKxLhei6S9CQXFEbbKuqLg0DA=="
+    crossorigin="anonymous" referrerpolicy="no-referrer" />
+
+
+  <!-- Title of the webpage -->
+  <title>Bmi Calculator | Fitclub</title>
+</head>
+
+<body>
+  <!-- Navigation Section -->
+  <nav>
+    <div class="nav__logo">
+      <a href="#"><img src="assets/logo.png" alt="logo" /></a>
+    </div>
+    <ul class="nav__links">
+      <!-- Navigation links -->
+      <li class="link"><a href="index.php">Home</a></li>
+      <li class="link"><a href="plan.html">Plan</a></li>
+      <li class="link"><a href="gallery.html">Gallery</a></li>
+      <li class="link"><a href="about.html">About Us</a></li>
+      <li class="link"><a href="whyUs.html">Why us?</a></li>
+    </ul>
+
+    <!-- Register Now button -->
+    <button id="RegisterInButton" class="btn">Register Now</button>
+
+  </nav>
+
+
+  <div class="bmi-main">
+    <div class="bmi-heading">
+      <h2>Bmi Calculator</h2>
+      <hr>
+    </div>
+
+    <div class="bmi-input1">
+      <label for="height">Height (cm):</label>
+      <input class="bmi-label" type="number" id="height" placeholder="Enter your height" required>
+    </div>
+
+    <div class="bmi-input2">
+      <label for="weight">Weight (kg):</label>
+      <input class="bmi-label" type="number" id="weight" placeholder="Enter your weight">
+    </div>
+
+    <button class="bmi-btn" onclick="calculateBMI()">Calculate</button>
+    <h3 class="bmi-result">Your BMI is: <span style="color: white;" id="bmiResult"></span></h3>
+    <p style="color: white;" id="bmiCategory"></p>
+  </div>
+
+  <!-- Footer Section -->
+  <footer class="section__container footer__container">
+    <span class="bg__blur"></span>
+    <span class="bg__blur footer__blur"></span>
+    <!-- Footer columns -->
+    <div class="footer__col">
+      <!-- Footer logo and description -->
+      <div class="footer__logo"><img src="assets/logo.png" alt="logo" /></div>
+      <p>
+        Take the first step towards a healthier, stronger you with our
+        unbeatable pricing plans. Let's sweat, achieve, and conquer together!
+      </p>
+      <!-- Social media links -->
+      <div class="footer__socials">
+        <a href="#"><i class="ri-facebook-fill"></i></a>
+        <a href="#"><i class="ri-instagram-line"></i></a>
+        <a href="#"><i class="ri-twitter-fill"></i></a>
+      </div>
+    </div>
+    <!-- Links to various sections -->
+
+    <div class="address-link">
+      <div class="footer__col-address">
+        <h4><i class="fa-solid fa-location-dot"></i>Address</h4>
+        <div class="footer-col-address-para">
+          <p>5th Floor, Amanah Mall, Model Town Link Rd, Muhammadpura, Lahore, Punjab 54700</p>
+        </div>
+      </div>
+    </div>
+
+    <div class="footer__col">
+      <h4><i class="fa-solid fa-address-card"></i>About Us</h4>
+      <a href="about.html">About Us</a>
+      <a href="bmi.html">BMI Calculator</a>
+
+    </div>
+    <div class="footer__col">
+      <h4><i class="fa-solid fa-phone-volume"></i>Contact</h4>
+      <a href="contactUs.html">Contact Us</a>
+      <a href="privacy.html">Privacy Policy</a>
+      <a href="terms&condtion.html">Terms & Conditions</a>
+    </div>
+  </footer>
+  <script>
+
+    // Add an event listener to the button
+    document.getElementById("RegisterInButton").addEventListener("click", function () {
+      // Redirect to the specified URL when the button is clicked
+      window.location.href = "register.php";
+    });
+
+    //BMI Calculator Code
+    function calculateBMI() {
+      var height = parseFloat(document.getElementById("height").value);
+      var weight = parseFloat(document.getElementById("weight").value);
+
+      if (isNaN(height) || isNaN(weight) || height <= 0 || weight <= 0) {
+        alert("Please enter valid values for height and weight.");
+        return;
+      }
+
+      var bmi = weight / ((height / 100) * (height / 100));
+      bmi = bmi.toFixed(2);
+
+      document.getElementById("bmiResult").innerText = bmi;
+
+      var category = getBMICategory(bmi);
+      document.getElementById("bmiCategory").innerText = "Category: " + category;
+    }
+
+    function getBMICategory(bmi) {
+      if (bmi < 18.5) {
+        return "Underweight";
+      } else if (bmi >= 18.5 && bmi < 24.9) {
+        return "Normal weight";
+      } else if (bmi >= 25 && bmi < 29.9) {
+        return "Overweight";
+      } else {
+        return "Obese";
+      }
+    }
+  </script>
+</body>
+
+</html>

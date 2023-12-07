@@ -1,0 +1,134 @@
+<!DOCTYPE html>
+<html lang="en">
+
+<head>
+  <!-- Document metadata -->
+  <meta charset="UTF-8" />
+  <meta name="viewport" content="width=device-width, initial-scale=1.0" />
+
+  <!-- External resources -->
+  <link href="https://cdn.jsdelivr.net/npm/remixicon@3.4.0/fonts/remixicon.css" rel="stylesheet" />
+  <link rel="stylesheet" href="styles.css" />
+
+  <link rel="stylesheet" href="https://cdnjs.cloudflare.com/ajax/libs/font-awesome/6.4.2/css/all.min.css"
+    integrity="sha512-z3gLpd7yknf1YoNbCzqRKc4qyor8gaKU1qmn+CShxbuBusANI9QpRohGBreCFkKxLhei6S9CQXFEbbKuqLg0DA=="
+    crossorigin="anonymous" referrerpolicy="no-referrer" />
+
+  <!-- Title of the webpage -->
+  <title>Contact Us | Fitclub</title>
+</head>
+
+<body>
+  <!-- Navigation Section -->
+  <nav>
+    <div class="nav__logo">
+      <a href="#"><img src="assets/logo.png" alt="logo" /></a>
+    </div>
+    <ul class="nav__links">
+      <!-- Navigation links -->
+      <li class="link"><a href="index.php">Home</a></li>
+      <li class="link"><a href="plan.html">Plan</a></li>
+      <li class="link"><a href="gallery.html">Gallery</a></li>
+      <li class="link"><a href="about.html">About Us</a></li>
+      <li class="link"><a href="whyUs.html">Why us?</a></li>
+    </ul>
+
+    <!-- Register Now button -->
+    <button id="RegisterInButton" class="btn">Register Now</button>
+
+  </nav>
+
+  <div class="contact-container">
+    <h1>We're here Let's talk</h1>
+    <hr>
+    <div class="contactUs-para">
+      <p>Our gym is always open for a good workout session.</p>
+    </div>
+    <div class="contactUs-phone">
+      <h2>Phone - <span style="color: #d79447;">Whatsapp</span></h2>
+      <div class="contactUs-para">
+        <p>For immediate assistance, give us a call.Our team is ready to help you</p>
+
+      </div>
+      <div class="address-link">
+        <div class="contactUs-phone-symbol">
+          <p><i class="fa-solid fa-square-phone"></i>+92-304-6300-407</p>
+        </div>
+      </div>
+
+    </div>
+
+    <div class="contactUs-office">
+      <h2>Email</h2>
+      <div class="contactUs-para">
+        <p>For any inquiries or assistance,feel free to drop us an email. We're here to help you</p>
+      </div>
+      <i class="fa-solid fa-envelope"></i>
+      <a href="daudafzaal12@email.com">Fitnesclub1622@email.pk</a>
+    </div>
+
+    <div class="contactUs-hour">
+      <h2 style="color: #d79447;">Hours</h2>
+      <div class="contactUs-para">
+        <p>Monday - Friday (9AM - 10PM)</p>
+        <p>Saturday - Sunday (9AM - 12PM)</p>
+        <p>Ramdan (10AM - 4PM)</p>
+      </div>
+
+    </div>
+  </div>
+
+  <!-- Footer Section -->
+  <footer class="section__container footer__container">
+    <span class="bg__blur"></span>
+    <span class="bg__blur footer__blur"></span>
+    <!-- Footer columns -->
+    <div class="footer__col">
+      <!-- Footer logo and description -->
+      <div class="footer__logo"><img src="assets/logo.png" alt="logo" /></div>
+      <p>
+        Take the first step towards a healthier, stronger you with our
+        unbeatable pricing plans. Let's sweat, achieve, and conquer together!
+      </p>
+      <!-- Social media links -->
+      <div class="footer__socials">
+        <a href="#"><i class="ri-facebook-fill"></i></a>
+        <a href="#"><i class="ri-instagram-line"></i></a>
+        <a href="#"><i class="ri-twitter-fill"></i></a>
+      </div>
+    </div>
+    <!-- Links to various sections -->
+
+    <div class="address-link">
+      <div class="footer__col-address">
+        <h4><i class="fa-solid fa-location-dot"></i>Address</h4>
+        <div class="footer-col-address-para">
+          <p>5th Floor, Amanah Mall, Model Town Link Rd, Muhammadpura, Lahore, Punjab 54700</p>
+        </div>
+      </div>
+    </div>
+
+    <div class="footer__col">
+      <h4><i class="fa-solid fa-address-card"></i>About Us</h4>
+      <a href="about.html">About Us</a>
+      <a href="bmi.html">BMI Calculator</a>
+
+    </div>
+    <div class="footer__col">
+      <h4><i class="fa-solid fa-phone-volume"></i>Contact</h4>
+      <a href="contactUs.html">Contact Us</a>
+      <a href="privacy.html">Privacy Policy</a>
+      <a href="terms&condtion.html">Terms & Conditions</a>
+    </div>
+  </footer>
+
+  <script>
+    // Add an event listener to the button
+    document.getElementById("RegisterInButton").addEventListener("click", function () {
+      // Redirect to the specified URL when the button is clicked
+      window.location.href = "register.php";
+    });
+  </script>
+</body>
+
+</html>

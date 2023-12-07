@@ -1,0 +1,115 @@
+<!DOCTYPE html>
+<html lang="en">
+
+<head>
+  <!-- Document metadata -->
+  <meta charset="UTF-8" />
+  <meta name="viewport" content="width=device-width, initial-scale=1.0" />
+
+  <!-- External resources -->
+  <link href="https://cdn.jsdelivr.net/npm/remixicon@3.4.0/fonts/remixicon.css" rel="stylesheet" />
+  <link rel="stylesheet" href="styles.css" />
+
+  <link rel="stylesheet" href="https://cdnjs.cloudflare.com/ajax/libs/font-awesome/6.4.2/css/all.min.css"
+    integrity="sha512-z3gLpd7yknf1YoNbCzqRKc4qyor8gaKU1qmn+CShxbuBusANI9QpRohGBreCFkKxLhei6S9CQXFEbbKuqLg0DA=="
+    crossorigin="anonymous" referrerpolicy="no-referrer" />
+
+  <!-- Title of the webpage -->
+  <title>About us | Fitclub</title>
+</head>
+
+<body>
+  <!-- Navigation Section -->
+  <nav>
+    <div class="nav__logo">
+      <a href="#"><img src="assets/logo.png" alt="logo" /></a>
+    </div>
+    <ul class="nav__links">
+      <!-- Navigation links -->
+      <li class="link"><a href="index.php">Home</a></li>
+      <li class="link"><a href="plan.html">Plan</a></li>
+      <li class="link"><a href="gallery.html">Gallery</a></li>
+      <li class="link"><a href="about.html">About Us</a></li>
+      <li class="link"><a href="whyUs.html">Why us?</a></li>
+    </ul>
+    <!-- Register Now button -->
+    <button id="RegisterInButton" class="btn">Register Now</button>
+  </nav>
+
+  <div class="about-content">
+    <div class="about-heading">
+      <h1>About <span style="color: #d79447;">Us</span></h1>
+      <hr>
+    </div>
+
+    <h2 class="about-h1">Welcome to Fitness Club</h2>
+    <p class="about-para1">At Fitness Club we believe that fitness is not just a routine; it's a lifestyle. Established
+      with a passion for health and wellness, our gym is more than just a place to work out it's a community dedicated
+      to transforming lives.</p>
+    <h2 class="about-h2">Expert Trainers, Personalized Guidance</h2>
+    <p class="about-para2">Our team of experienced and certified trainers is dedicated to helping you unleash your full
+      potential. We understand that each individual is unique, and that's why we offer personalized training programs
+      tailored to your specific needs and objectives. Whether you're looking to build muscle, shed pounds, or improve
+      overall well-being, our trainers are committed to guiding you towards success.</p>
+    <h2 class="about-h3">Join Us on Your Fitness Journey</h2>
+    <p class="about-para3">Embark on a fitness journey like never before. At FitClub, we invite you to join a community
+      that values health, wellness, and the joy of reaching new fitness heights. Whether you're here for a quick workout
+      or to make lasting lifestyle changes, we're here to support you.</p>
+
+  </div>
+
+  <!-- Footer Section -->
+  <footer class="section__container footer__container">
+    <span class="bg__blur"></span>
+    <span class="bg__blur footer__blur"></span>
+    <!-- Footer columns -->
+    <div class="footer__col">
+      <!-- Footer logo and description -->
+      <div class="footer__logo"><img src="assets/logo.png" alt="logo" /></div>
+      <p>
+        Take the first step towards a healthier, stronger you with our
+        unbeatable pricing plans. Let's sweat, achieve, and conquer together!
+      </p>
+      <!-- Social media links -->
+      <div class="footer__socials">
+        <a href="#"><i class="ri-facebook-fill"></i></a>
+        <a href="#"><i class="ri-instagram-line"></i></a>
+        <a href="#"><i class="ri-twitter-fill"></i></a>
+      </div>
+    </div>
+    <!-- Links to various sections -->
+
+    <div class="address-link">
+      <div class="footer__col-address">
+        <h4><i class="fa-solid fa-location-dot"></i>Address</h4>
+        <div class="footer-col-address-para">
+          <p>5th Floor, Amanah Mall, Model Town Link Rd, Muhammadpura, Lahore, Punjab 54700</p>
+        </div>
+      </div>
+    </div>
+
+    <div class="footer__col">
+      <h4><i class="fa-solid fa-address-card"></i>About Us</h4>
+      <a href="about.html">About Us</a>
+      <a href="bmi.html">BMI Calculator</a>
+
+    </div>
+    <div class="footer__col">
+      <h4><i class="fa-solid fa-phone-volume"></i>Contact</h4>
+      <a href="contactUs.html">Contact Us</a>
+      <a href="privacy.html">Privacy Policy</a>
+      <a href="terms&condtion.html">Terms & Conditions</a>
+    </div>
+  </footer>
+</body>
+<script>
+
+  // Add an event listener to the button
+  document.getElementById("RegisterInButton").addEventListener("click", function () {
+    // Redirect to the specified URL when the button is clicked
+    window.location.href = "register.php";
+  });
+
+</script>
+
+</html>
